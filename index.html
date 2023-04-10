@@ -124,12 +124,17 @@
 										<!-- <span class="date">April 24, 2017</span> -->
 										<h2><a href="#">Literature Review</a></h2>
 									</header>
-									<p>Previously, the analysis was conducted on the MURA dataset to classify the images as normal or abnormal. 
-										They have built a neural network, as the data consists of X-ray images using which predictions were made. 
+									<p>Previously, the analyses conducted on the MURA dataset only classified the images as normal or abnormal. 
+										They built a neural network, as the data consists of X-ray images, which they used to make predictions. 
 										The model evaluation was based on comparing the accuracies with the best and worst radiologists' performances. 
-										On the forearm, humerus, and shoulder, models were performing lower than the worst radiologist.</p>
+										As you can see from the accuracy score table, models had lower performance than the worst radiologist when 
+										attempting to classify an image displaying a forearm, humerus, or shoulder.</p>
+									
+									<h3>Accuracy Score Table</h3>
 									<a href="#" class="image fit"><img src="images/rscores.png" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+									<p>The values in the parentheses are the accuracy scores of the abnormal and normal images. The accuracy scores are 
+										the average of those two values. 
+									</p>
 									<ul class="actions special">
 										<li><a href="https://arxiv.org/pdf/1712.06957.pdf" target="_blank" class="button">Full Paper</a></li>
 									</ul>
@@ -177,10 +182,13 @@
 											</tr>
 										  </table>
 
-								    <p> There are 14 unique image types between the 7 different body parts and 2 study type categories.
-										The matrix below contains examples of the images we are analyzing for our project. 
+								    <p> There are fourteen unique image types between the seven different body parts and two study type categories.
+										The image matrix contains examples of the images we are analyzing for our project. 
 										The blue circles indicate abnormality, so the left column displays images classified as normal, 
 										whereas the right column displays images classified as abnormal. </p>
+
+									<h3>Image Matrix</h3>
+
 									<a href="#" class="image fit"><img src="images/bpics.png" alt="" /></a>
 								
 									<!-- <p>The left column displays images classifed as normal, whereas the right column displays images classified as abnormal. </p> -->
