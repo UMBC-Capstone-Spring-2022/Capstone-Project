@@ -103,10 +103,10 @@
 								</ul> -->
 
 							</article>
-							<div>
-								<header>
+							<!-- <div>
+								<header> -->
 									<!-- <span class="date">April 24, 2017</span> -->
-									<h2><a href="#">Literature Review</a></h2>
+									<!-- <h2><a href="#">Literature Review</a></h2>
 								</header>
 								<p>Previously, the analysis was conducted on the MURA dataset to classify the images as normal or abnormal. 
 									They have built a neural network, as the data consists of X-ray images using which predictions were made. 
@@ -116,7 +116,7 @@
 								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
 								<ul class="actions special">
 									<li><a href="https://arxiv.org/pdf/1712.06957.pdf" target="_blank" class="button">Full Paper</a></li>
-								</div>
+								</div> -->
 						<!-- Posts -->
 							<section class="posts">
 								<article>
@@ -139,16 +139,51 @@
 										<!-- <span class="date">April 22, 2017</span> -->
 										<h2><a href="#">MURA Dataset</a></h2>
 									</header>
-									<figure>
+									<p>We requested the data from the Stanford University ML Group. 
+										The dataset consists of 11,967 patients, approximately 40,000 images, 4 studies, and 5 fields, 
+										specifically image, patient_id, study, study_type, and region. Please see the data dictionary below: </p>
+										
+										<table>
+											<tr>
+											  <th>Field</th>
+											  <th>Data Type</th>
+											  <th>Description</th>
+											</tr>
+											<tr>
+											  <td>image</td>
+											  <td>file</td>
+											  <td>medical radiography image</td>
+											</tr>
+											<tr>
+											  <td>patient_id</td>
+											  <td>text</td>
+											  <td>unique identifier</td>
+											</tr>
+											<tr>
+											  <td>study</td>
+											  <td>integer</td>
+											  <td>how many times the image has been studied to classify</td>
+											</tr>
+											<tr>
+											  <td>study_type</td>
+											  <td>integer</td>
+											  <td>binary abnormality detection indicator</td>
+											</tr>
+											<tr>
+											  <td>region</td>
+											  <td>text</td>
+											  <td>body part depicted in the image</td>
+											</tr>
+										  </table>
+
 									<a href="#" class="image fit"><img src="images/bpics.png" alt="" /></a>
-									<figcaption>Normal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Abnormal</figcaption>
-									</figure>
+								
 									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
 									<ul class="actions special">
 										<li><a href="#" class="button">Raw Data</a></li>
 									</ul>
 								</article>
-								<article>
+								<!-- <article>
 									<header>
 										<span class="date">April 18, 2017</span>
 										<h2><a href="#">Ante mattis<br />
@@ -195,7 +230,7 @@
 									<ul class="actions special">
 										<li><a href="#" class="button">Full Story</a></li>
 									</ul>
-								</article>
+								</article> -->
 							</section>
 
 						<!-- Footer -->
