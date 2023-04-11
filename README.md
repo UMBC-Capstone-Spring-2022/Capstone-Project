@@ -7,6 +7,8 @@ base off of the paper [An Image is Worth 16x16 Words: Transformers for Image Rec
 to see if a vision transformer architecture can beat the current state of the art CNN's accuracy. We will also
 implement a multiclass approach to test if this can increase our accuracy also.
 
+[Project Webpage](https://umbc-capstone-spring-2023.github.io/Capstone-Project/)
+
 ## Getting Started
 
 You will need to request permission from [here](https://stanfordmlgroup.github.io/competitions/mura/) to be able to 
