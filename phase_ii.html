@@ -147,7 +147,23 @@ plt.show()
 									<li>ViT Normalized images with mean (0.5, 0.5, 0.5) and standard deviation (0.5, 0.5, 0.5)</li>
 								</ul>
 								<a href="#"><h2><center>Model Construction</center></h2></a>
-								<p>Insert Text Here</p>
+
+								<a href="#"><h3><center>Base Model</center></h3></a>
+								<ul>
+									<li>We implemented the TinyVgg architecture </li>
+									<li>We have two convalutional layers and a max pooling layer in each stack with a stack size of 2</li>
+									<li>We wanted a simple CNN to compare our initial ViT results to</li>
+									<li>We trained the model intially with batch_size = 32 and 5 epochs</li>
+								</ul>
+
+								<a href="#"><h3><center>ViT Model</center></h3></a>
+								<ul>
+									<li>We fine-tuned the pretrained model google vit base patch16-224-in21k on our dataset</li>
+									<li>This Vision Transformer (ViT) was pre-trained on ImageNet-21k, which has 14 million images</li>
+									<li>Images are presented to the model as a sequence of fixed-size patches, which are linearly embedded</li>
+									<li>We changed all image shapes to 224 x 224</li>
+									<li>We started with batch_size = 32 and 4 epochs</li>
+								</ul>
 								<a href="#"><h2><center>Model Evaluation</center></h2></a>
 								<p>Insert Text Here</p>
 <!-- 							
