@@ -79,7 +79,7 @@
 								<a href="#"><img src="images/viz4.png" width="500" height="600"></a>
 								<a href="#"><img src="images/viz2.png" width="1000" height="800"></a> -->
 								
-								<table bordercolor= "#FFFFFF">
+								<table rules = none>
 									<tr>
 									  <td bgcolor= "#FFFFFF">
 										<a href="#" class="image fit"><img src="images/viz1.png" width="300" height="350"></a>
@@ -137,7 +137,14 @@ plt.show()
 									</code></pre>
 
 								<a href="#"><h2><center>Data Pre-Processing</center></h2></a>
-								<p>Insert Text Here</p>
+								<p>In order to prepare the images for model ingestion, we took the following steps:</p>
+								<ul>
+									<li>Transformed all images to grayscale</li>
+									<li>Changed the number of channels to 3 for ViT and 1 for base model</li>
+									<li>Converted ranges of pixel values between [0.0, 1.0]</li>
+									<li>Changed all image shapes to 224x224</li>
+									<li>ViT Normalized images with mean (0.5, 0.5, 0.5) and standard deviation (0.5, 0.5, 0.5)</li>
+								</ul>
 								<a href="#"><h2><center>Model Construction</center></h2></a>
 								<p>Insert Text Here</p>
 								<a href="#"><h2><center>Model Evaluation</center></h2></a>
