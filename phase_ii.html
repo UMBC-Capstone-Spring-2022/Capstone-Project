@@ -75,15 +75,61 @@
 							<section>
 								<a href="#"><h2><center>Exploratory Data Analysis</center></h2></a>
 
-								<a href="#"></a><img src="images/viz1.png" width="300" height="400"></a>
-								<a href="#"></a><img src="images/viz2.png" width="300" height="400"></a>
-								<a href="#"></a><img src="images/viz3.png" width="300" height="400"></a>
-								<a href="#"></a><img src="images/viz4.png" width="300" height="400">
+								<a href="#"></a><img src="images/viz1.png" width="500" height="600"></a>
+								<a href="#"></a><img src="images/viz2.png" width="500" height="600"></a>
+								<a href="#"></a><img src="images/viz3.png" width="500" height="600"></a>
+								<a href="#"></a><img src="images/viz4.png" width="500" height="600">
 
+								<p>We explored our dataset using python. We visualized . See a code snippet of our core programming code that created the plots and charts above.</p>
+
+								<pre><code>
+									
+									# function to get patient count by study type and region with visulization
+										def type_region(df):  
+											stack = df.groupby(['region', 'study_type']).count()['image_path'].reset_index()
+											stack.columns = ['Region','Study Type','Count']
+											stack_neg = stack[stack['Study Type'] == 'normal']
+											stack_pos = stack[stack['Study Type'] == 'abnormal']
+											stack_all = stack_pos.merge(stack_neg, on = 'Region', how = 'left')
+											stack_all['Count_z'] = stack_all['Count_x'] + stack_all['Count_y']
+											display(stack_all)
+
+											# patient count by study type and region stacked bargraph
+											fig, ax = plt.subplots(figsize = (8,8))
+
+											x = stack_all['Region']
+											y1 = stack_all['Count_x']
+											y2 = stack_all['Count_y']
+											y3 = stack_all['Count_z']
+											
+											ax.barh(x, y1, color = '#A8D3E3', label = 'Abnormal')
+											ax.barh(x, y2, left = y1, color = '#0097a7', label = 'Normal')
+											container = ax.containers[0]
+											container2 = ax.containers[1]
+											ax.bar_label(container, labels = [' ' + f'{x:,.0f}' for x in container.datavalues], style = 'italic', fontsize = 12, label_type = 'center')
+											ax.bar_label(container2, labels = [' ' + f'{x:,.0f}' for x in container2.datavalues], style = 'italic', fontsize = 12, label_type = 'center')
+											ax.xaxis.set_major_formatter(mpl.ticker.StrMethodFormatter('{x:,.0f}'))
+											ax.tick_params(axis = 'both', which = 'major', labelsize = 12)
+											ax.set_xlabel('Image Count', fontsize = 14, weight = 'bold')
+											ax.set_ylabel('Region', fontsize = 14, weight = 'bold')
+											#ax.set_yticks(x, rotation = 90)
+											ax.spines['right'].set_visible(False)
+											ax.spines['top'].set_visible(False)
+											ax.spines['left'].set_visible(True)
+											ax.spines['bottom'].set_visible(False)
+											plt.tick_params(left = False, bottom = False)
+											plt.title('Image Count by Study Type and Region', fontsize = 14, weight = 'bold')
+											ax.legend()
+
+											plt.show()
+									</code></pre>
 
 								<a href="#"><h2><center>Data Pre-Processing</center></h2></a>
+								<p>Insert Text Here</p>
 								<a href="#"><h2><center>Model Construction</center></h2></a>
+								<p>Insert Text Here</p>
 								<a href="#"><h2><center>Model Evaluation</center></h2></a>
+								<p>Insert Text Here</p>
 <!-- 							
 								<table> 
 									<tr> 
