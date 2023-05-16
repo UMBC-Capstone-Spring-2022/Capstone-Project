@@ -70,15 +70,15 @@
 									<tr>
 									  <td bgcolor= "#FFFFFF">
 										<pre><code>
-										ViT_mura_trainer = Trainer(
-										   model=ViT_mura_model,
-										   args=training_args_mura,
-										   data_collator=collate_fn,
-										   compute_metrics=compute_metrics,
-										   train_dataset=ViT_mura_train_all,
-										   eval_dataset=ViT_mura_test_all,
-										   tokenizer=feature_extractor,
-										)
+ViT_mura_trainer = Trainer(
+   model=ViT_mura_model,
+   args=training_args_mura,
+   data_collator=collate_fn,
+   compute_metrics=compute_metrics,
+   train_dataset=ViT_mura_train_all,
+   eval_dataset=ViT_mura_test_all,
+   tokenizer=feature_extractor,
+)
 										</code></pre>
 									  </td>
 									  <td bgcolor= "#FFFFFF">
