@@ -50,16 +50,30 @@
 								<!-- <a href="#" class="image main"><img src="images/vector.jpg" alt="" /></a> -->
 								<div class="image main"><a href="#" class="image fit"><img src="images/vector.jpg" alt="" /></a></div>
 
-								<a href="#"><h2><center>Final Model & Evaluation</center></h2></a>
+								<a href="#"><h2><center>Model Tuning & Evaluation</center></h2></a>
+								<p>To evaluate the accuracy of our model:</p>
 									
 								<ul>
-									<li style="text-align:left" >We will implement ensemble modeling for neural networks to improve our model performance and accuracy, then finalize our model based on the results</li>
-									<li style="text-align:left" >We will attempt to use Class Activation Mapping (CAM) to identify the discriminative regions that would influence the deep learning model to make a prediction</li>
-									<li style="text-align:left" >Our end product will be deployed using a Web API (user interface) and the user will be able to upload the X-ray images to identify abnormality or lack thereof</li>
-									<li style="text-align:left" ><i>Since the study contains a collection of multi-view images from different angles, its final classification will be based on the threshold (0.6) on the average predicted probabilities</i></li>
+									<li style="text-align:left">Base model accuracy was poor 58% with batch size 32, epochs = 2 with run time = 22 mins</li>
+									<li style="text-align:left">We altered the batch size and epochs to analyze the model performance</li>
+									<li style="text-align:left">Employing accuracy and loss function, we evaluated the ViT model and DenseNet Model</li>
+									<li style="text-align:left">We applied resampling techniques to handle imbalanced datasets</li>
+									<li style="text-align:left">Using a Pytorch sampler called ‘ImbalancedDatasetSampler’, which enabled us to rebalance the class distributions, we estimated the sampling weights, and mitigated overfitting by using data augmentation techniques</li>
+									<li style="text-align:left">With this balanced dataset, we used the DenseNet model with batch size 64, epochs = 15 to save the best model with less loss</li>
+									<li style="text-align:left">We attempted to ensemble neural networks, however, there is not much change with accuracy so to avoid high variance due to model complexity, we decided to use DenseNet/ViT as our final models based on their performance for different body parts</li>
 								</ul>
 
-								<h2><center>More Coming Soon</center></h2>
+								<h2><center>Loss versus Accuracy</center></h2>
+								<p><center>[INSERT TEXT HERE]</center></p>
+								<a href="#" class="image fit"><img src="images/lva.png" alt="" /></a>
+								
+								<h2><center>Final Results</center></h2>
+								<p><center>View our final model performance below.</center></p>
+								<a href="#" class="image fit"><img src="images/finalresults.png" alt="" /></a>
+								
+								<h2><center>Web API</center></h2>
+								<p><center>We created a user interface with <a href="https://streamlit.io/">Streamlit</a>, an open source app framework in Python, that will apply machine learning predictions for images depicting all body parts.</center></p>
+								<a href="#" class="image fit"><img src="images/streamlit.png" alt="" /></a>
 
 								<!-- <p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
 								facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
