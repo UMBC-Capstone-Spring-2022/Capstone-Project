@@ -56,8 +56,8 @@
 								<a href="#"><h2><center>Project Plan</center></h2></a>
 
 								<p>We intend to create multiple classification models that can reliably classify images as normal or abnormal.
-									We want to use a Vision Transformer (ViT) to classify the images. Based on the paper <a href = "https://openreview.net/pdf?id=YicbFdNTTy" target="_blank">An Image Is Worth 16x16 Words: Transformers for Image Recognition at Scale</a>, ViT performed well compared to state-of-the-art convolutional neural networks. We want to test this hypothesis on our MURA dataset.
-									We plan to build a neural network, either a Convolution Neural Network (CNN), Dense Convolution Network, or Residual neural network (RNN). We also want to try ensembling neural networks. We will train multiple models and combine the predictions from these models to obtain better results.</p>
+									We will use a Vision Transformer (ViT) to classify the images. Based on the paper <a href = "https://openreview.net/pdf?id=YicbFdNTTy" target="_blank">An Image Is Worth 16x16 Words: Transformers for Image Recognition at Scale</a>, ViT performed well compared to state-of-the-art convolutional neural networks. We will test this hypothesis on our MURA dataset.
+									We plan to build a neural network, either a Convolution Neural Network (CNN) or Residual neural network (RNN). We will also attempt ensembling neural networks. We will train multiple models and combine the predictions from these models to obtain better results.</p>
 								<!-- <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sapien risus, commodo eget turpis at, elementum convallis enim turpis, lorem ipsum dolor sit amet nullam.</p>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus. Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum.</p> -->
 							
@@ -155,8 +155,8 @@ plt.show()
 									  <td bgcolor= "#FFFFFF">
 										<a href="#"><h3><center>Base Model</center></h3></a>
 										<ul>
-											<li>We implemented the TinyVgg architecture </li>
-											<li>We have two convalutional layers and a max pooling layer in each stack with a stack size of 2</li>
+											<li>We implemented a smaller version of the TinyVgg architecture </li>
+											<li>We have two convalutional layers and a max pooling layer in each stack repeated twice</li>
 											<li>We wanted a simple CNN to compare our initial ViT results to</li>
 											<li><i>We initially trained the model with with batch_size = 32 and 5 epochs</i></li>
 										</ul>
@@ -164,10 +164,9 @@ plt.show()
 									  <td bgcolor= "#FFFFFF">
 										<a href="#"><h3><center>ViT Model</center></h3></a>
 										<ul>
-											<li>We fine-tuned the pretrained model google vit base patch16-224-in21k on our dataset</li>
+											<li>We fine-tuned the pretrained model google ViT base patch16-224-in21k on our dataset</li>
 											<li>This Vision Transformer (ViT) was pre-trained on ImageNet-21k, which has 14 million images</li>
 											<li>Images are presented to the model as a sequence of fixed-size patches, which are linearly embedded</li>
-											<li>We changed all image shapes to 224 x 224</li>
 											<li><i>We initially trained the model with batch_size = 32 and 4 epochs</i></li>
 										</ul>
 									  </td>
