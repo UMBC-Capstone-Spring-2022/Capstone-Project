@@ -57,6 +57,20 @@
 									<li style="text-align:left">Trained images with a DenseNet model with batch size 64, epochs= 15 and used Cross-entropy loss to adjust model weights during training along with adam optimizer and learning rate step size as 3</li>
 								</ul>
 								
+								<p><center>View the code corresponding to the steps outlined above.</center></p>
+								<pre><code>
+model_densenet161 = models.densenet161(pretrained = True)
+for param in model_densenet161.parameters():
+	param.requires_grad = False
+model_densenet161.classifier = torch.nn.Linear(model_densenet161.classifier.in_features, out_features = 200)
+model_densenet161 = model_densenet161.to(DEVICE)
+
+def training(model, model_name, num_epochs, train_dataloader, test_dataloader):
+	loss_function = torch.nn.CrossEntropyLoss()
+	optimizer = torch.optim.Adam(model.parameters(), lr = 0.0003)
+	scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size = 3, gamma = 0.33)
+								</code></pre>
+								
 								<a href="#"><h2><center>Vision Transformer (ViT) Model</center></h2></a>
 								<ul>
 									<li style="text-align:left">Created Hugging Face Datasets and transformed</li>
